@@ -110,7 +110,7 @@
 <p>experience. We also provided a web design that reflects their classic style and young </p>
 <p>audience.</p></div>
 				<div class="colFooter">&nbsp;</div>
-			 </div>';
+			 </div>
 <?php
 	include("partials/sidebar.php");
 ?>

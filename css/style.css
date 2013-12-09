@@ -126,6 +126,7 @@ body {
 	border-right: #9ba0ab 1px solid;
 	overflow: hidden;
 	background: #fff;
+	max-width: 1280px;
 }
 
 #header {

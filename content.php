@@ -5,19 +5,25 @@
 		$pageToLoad = $page;
 		switch ($page)
 		{
+
 			case "about":
 			case "what-we-do":
 				$pageToLoad = "what-we-do";
 			break;
 
-
+			case "services":
+			case "video":
+			case "web-design":
+			case "visual-identity":
+				$pageToLoad = "services";
+			break;
 
 			default:
 				
 			break;
 		}
 
-		return $page;
+		return $pageToLoad;
 	}
 
 
@@ -25,11 +31,13 @@
 	if (isset($_GET["page"]))
 	{
 		include("pages/".redirect($_GET["page"]).".php");
+	}else
+	{
+		include("pages/default.php");
 	}
 	
-?>
 
-
+/*
 	if($_GET["page"]=="about" || $_GET["page"]=="what-we-do"){
 		echo '<div class="cols2">
             	<div class="colHeader col1">What We Do</div>
@@ -295,4 +303,9 @@ graphics projects to be just what our clients need to bring their concepts to th
 				</div>
           </div>';
 	}
+?>
+
+
+*/
+
 ?>
