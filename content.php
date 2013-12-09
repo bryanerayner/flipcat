@@ -1,4 +1,35 @@
 <?php
+
+	function redirect($page)
+	{
+		$pageToLoad = $page;
+		switch ($page)
+		{
+			case "about":
+			case "what-we-do":
+				$pageToLoad = "what-we-do";
+			break;
+
+
+
+			default:
+				
+			break;
+		}
+
+		return $page;
+	}
+
+
+
+	if (isset($_GET["page"]))
+	{
+		include("pages/".redirect($_GET["page"]).".php");
+	}
+	
+?>
+
+
 	if($_GET["page"]=="about" || $_GET["page"]=="what-we-do"){
 		echo '<div class="cols2">
             	<div class="colHeader col1">What We Do</div>
